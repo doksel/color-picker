@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react';
 
 function App() {
+  const [value, setValue]=useState<string>("");
+
+  const rgb2hex = (r: number, g: number, b: number) => (
+    "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
+  );
+
+  const hex2rgb = (c: number) => {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(c);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
+
+  useEffect(() => {
+    const color = rgb2hex(0,0,0)
+    setValue(color)
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>{value}</div>
   );
 }
 
