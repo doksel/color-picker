@@ -1,6 +1,6 @@
 import React, { MouseEvent } from "react";
 
-import Loader from "../../components/Loader";
+import Loader from "../Loader";
 
 import { CustomButtonTypes } from "./types";
 import { WrapButton } from "./styles";
