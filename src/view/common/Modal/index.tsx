@@ -1,8 +1,9 @@
 import React from "react";
 
+import {WrapModal} from "./styles";
 
-const Loader = () => (
-      <div></div>
+const Loader: React.FC = ({children}) => (
+      <WrapModal>{children}</WrapModal>
 );
 
 export default Loader;

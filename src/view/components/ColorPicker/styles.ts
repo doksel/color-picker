@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 type ColorType = {
   color?: string;
+  onClick?: any
 };
 
 export const WrapColorPicker = styled.div<ColorType>`
@@ -14,6 +15,7 @@ export const WrapColorPicker = styled.div<ColorType>`
   margin: 20px;
   border: 1px solid ${props => props.theme.colors.disabled};
   box-shadow: 0px 0px 2px ${props => props.theme.colors.disabled};
+  position: relative;
 `;
 
 export const ValueBlock = styled.div<ColorType>`
