@@ -6,4 +6,5 @@ export type PropsTypes = {
     max?: number; 
     withoutThumb?: boolean;
     color?: string;
+    onChange?: (value: number) => void;
 };

@@ -1,12 +1,12 @@
 import { type } from "os";
 
-export type CoorsTypes = {
+export type ColorsTypes = {
     name: string;
     value: string;
 };
 
 export type ColorPickerTypes = {
     value: string;
-    onChange: ()=>void;
-    colors: Array<CoorsTypes>
+    onChange: (color: string)=>void;
+    colors: Array<ColorsTypes>
 };

@@ -33,7 +33,6 @@ export const WrapSlider = styled.div<ColorType>`
         }
   
         .thumb {
-          z-index: 1;
           left: 0px;
           top: -10px;
           outline: none;

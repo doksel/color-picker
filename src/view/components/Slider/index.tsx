@@ -4,15 +4,15 @@ import ReactSlider from "react-slider";
 import {WrapSlider, Scale, } from "./styles";
 import {PropsTypes} from "./types";
 
-const Slider: React.FC<PropsTypes> = ({ color, label, step = 1, min = 0, max = 255, withoutThumb = false }) => {
+const Slider: React.FC<PropsTypes> = ({ color, label, step = 1, min = 0, max = 255, withoutThumb = false, onChange }) => {
   const [value, setValue] = useState(min);
   const scale = useMemo(() =>
     new Array(1 + max - min).fill(0).map((el, index) => (el = index)), []
   );
 
-//   useEffect(() => {
-//     input.onChange(value);
-//   }, [value]);
+  useEffect(() => {
+    // onChange && onChange(value)
+  }, [value]);
 
   return (
     <WrapSlider color={color}>

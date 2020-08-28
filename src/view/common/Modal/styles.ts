@@ -10,4 +10,6 @@ export const WrapModal = styled.div`
   top: 100%;
   left: 0;
   box-shadow: 0 0 7px 1px grey;
+  background: #fff;
+  z-index: 1;
 `;

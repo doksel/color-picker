@@ -24,11 +24,7 @@ export const ValueBlock = styled.div<ColorType>`
   align-items: center;
   justify-content: center;
   border-right: 1px solid ${props => props.theme.colors.disabled};
-
-    // div {
-    //   height: max-content;
-    // }
-  `;
+`;
 
 export const ColorBlock = styled.div<ColorType>`
   width: 100%;
@@ -44,7 +40,7 @@ export const ColorBlock = styled.div<ColorType>`
     height: 20px;
     background: ${props => props.color ? props.color : "#008000"};
   }
-  `;
+`;
 
 export const SelectBlock = styled.div<ColorType>`
   width: 100%;
@@ -65,5 +61,17 @@ export const SelectBlock = styled.div<ColorType>`
       border: 10px solid transparent;
       border-top: 10px solid ${props => props.theme.colors.disabled};
     }
+  }
+`;
+
+export const WrapButton = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  div:first-child {
+    margin-right: 10px;
   }
 `;
